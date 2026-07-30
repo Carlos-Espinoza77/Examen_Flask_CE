@@ -1,6 +1,10 @@
-def main():
-    print("Hello from examen-flask-ce!")
+from flask import Flask
 
+app = Flask(__name__)
+
+@app.route("/")
+def inicio():
+    return "¡Hola Mundo!"
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True)
